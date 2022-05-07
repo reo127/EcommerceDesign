@@ -1,3 +1,4 @@
+/* This Style use in Screens/Home.jsx */
 .catagoryList{
   display: flex;
   align-items: center;
@@ -11,4 +12,23 @@
   border-radius: 12px;
   box-shadow: 1px 4px 10px 0px #888888;
   margin: 10px 10px;
+}
+
+/* This Style use in Components/App.js */
+.footer{
+  padding: 1rem;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.FooterHeading{
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.socialIcons, a{
+  color: white;
 }
