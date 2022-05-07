@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import StoreLogo from '../images/StoreLogo.png';
+
 import StoreLogo from '../images/StoreLogo2.png';
 
 // For AppBar/Navbar
