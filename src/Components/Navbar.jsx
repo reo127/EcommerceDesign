@@ -1,6 +1,8 @@
 import * as React from 'react';
 
 import StoreLogo from '../images/StoreLogo2.png';
+import Stack from '@mui/material/Stack';
+import Modal from '@mui/material/Modal';
 
 // For AppBar/Navbar
 import { styled, alpha } from '@mui/material/styles';
@@ -181,12 +183,21 @@ export default function Navbar() {
     </Menu>
   );
 
+  // Handle Modal for Open and Close
+  const [login, setLogin] = React.useState(false);
+  const loginOpen = () => setLogin(true);
+  const loginClose = () => setLogin(false);
+
+  const [register, setRegister] = React.useState(false);
+  const registerOpen = () => setRegister(true);
+  const registerClose = () => setRegister(false);
+
 
 
   // Return  -----------------------------------------------------------------------------------
   return (
     <>
-    
+
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
@@ -197,7 +208,7 @@ export default function Navbar() {
               aria-label="open drawer"
               sx={{ mr: 2 }}
             >
-              
+
               <MenuIcon onClick={toggleDrawer('left', true)} />
             </IconButton>
             <Typography
@@ -206,7 +217,7 @@ export default function Navbar() {
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
             >
-              <img src={StoreLogo} alt="logo" style={{width: "5rem"}} />
+              <img src={StoreLogo} alt="logo" style={{ width: "5rem" }} />
             </Typography>
             <Search>
               <SearchIconWrapper>
@@ -218,6 +229,51 @@ export default function Navbar() {
               />
             </Search>
             <Box sx={{ flexGrow: 1 }} />
+
+            {/* Login and Register Button and modal ================================================================================== */}
+            <Stack spacing={2} direction="row">
+              <Button variant="contained" color='warning' onClick={registerOpen}>Register</Button>
+              <Button variant="contained" color='warning'  onClick={loginOpen} > Login </Button>
+            </Stack>
+
+              {/* Login Modal */}
+            <Modal
+              keepMounted
+              open={login}
+              onClose={loginClose}
+              aria-labelledby="keep-mounted-modal-title"
+              aria-describedby="keep-mounted-modal-description"
+            >
+              <Box sx={ModalStyle}>
+                <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
+                  Login Modal
+                </Typography>
+                <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
+                  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                </Typography>
+              </Box>
+            </Modal>
+
+            {/* Register Modal */}
+            <Modal
+              keepMounted
+              open={register}
+              onClose={registerClose}
+              aria-labelledby="keep-mounted-modal-title"
+              aria-describedby="keep-mounted-modal-description"
+            >
+              <Box sx={ModalStyle}>
+                <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
+                  Register Modal
+                </Typography>
+                <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
+                  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                </Typography>
+              </Box>
+            </Modal>
+
+
+
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <IconButton size="large" aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="error">
@@ -321,5 +377,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       width: '60ch',
     },
   },
-  
+
 }));
+
+
+// Styles for Modal ---------------------------------------------------------------------------------
+const ModalStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
