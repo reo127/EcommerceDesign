@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { LoginModal, SignupModal } from './AuthModal'
+
 import StoreLogo from '../images/StoreLogo2.png';
 import Stack from '@mui/material/Stack';
 import Modal from '@mui/material/Modal';
@@ -233,10 +235,10 @@ export default function Navbar() {
             {/* Login and Register Button and modal ================================================================================== */}
             <Stack spacing={2} direction="row">
               <Button variant="contained" color='warning' onClick={registerOpen}>Register</Button>
-              <Button variant="contained" color='warning'  onClick={loginOpen} > Login </Button>
+              <Button variant="contained" color='warning' onClick={loginOpen} > Login </Button>
             </Stack>
 
-              {/* Login Modal */}
+            {/* Login Modal */}
             <Modal
               keepMounted
               open={login}
@@ -245,12 +247,7 @@ export default function Navbar() {
               aria-describedby="keep-mounted-modal-description"
             >
               <Box sx={ModalStyle}>
-                <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
-                  Login Modal
-                </Typography>
-                <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-                  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                </Typography>
+                <LoginModal />
               </Box>
             </Modal>
 
@@ -263,12 +260,7 @@ export default function Navbar() {
               aria-describedby="keep-mounted-modal-description"
             >
               <Box sx={ModalStyle}>
-                <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
-                  Register Modal
-                </Typography>
-                <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-                  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                </Typography>
+                <SignupModal />
               </Box>
             </Modal>
 
