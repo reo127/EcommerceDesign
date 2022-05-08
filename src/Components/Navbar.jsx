@@ -246,9 +246,7 @@ export default function Navbar() {
               aria-labelledby="keep-mounted-modal-title"
               aria-describedby="keep-mounted-modal-description"
             >
-              <Box sx={ModalStyle}>
                 <LoginModal />
-              </Box>
             </Modal>
 
             {/* Register Modal */}
@@ -259,9 +257,8 @@ export default function Navbar() {
               aria-labelledby="keep-mounted-modal-title"
               aria-describedby="keep-mounted-modal-description"
             >
-              <Box sx={ModalStyle}>
+
                 <SignupModal />
-              </Box>
             </Modal>
 
 
@@ -373,15 +370,3 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 
-// Styles for Modal ---------------------------------------------------------------------------------
-const ModalStyle = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};

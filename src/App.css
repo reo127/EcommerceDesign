@@ -1,4 +1,4 @@
-/* This Style use in Screens/Home.jsx */
+/* This Style use in Screens/Home.jsx for Catagory Style */
 .catagoryList{
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@
   margin: 10px 10px;
 }
 
-/* This Style use in Components/App.js */
+/* This Style use in Components/App.js For Footer Style */
 .footer{
   padding: 1rem;
   background: #111111;
@@ -31,4 +31,15 @@
 
 .socialIcons, a{
   color: white;
+}
+
+/* This Style use in Components/AuthModal.jsx For Login and register modal Style  */
+.LoginModal{
+  
+}
+
+.inputStyle{
+  /* width: 100%;
+  margin: 20px;
+  padding: 10px; */
 }
