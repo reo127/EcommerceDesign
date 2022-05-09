@@ -33,13 +33,9 @@
   color: white;
 }
 
-/* This Style use in Components/AuthModal.jsx For Login and register modal Style  */
-.LoginModal{
-  
-}
+/* This Style use in Components/Product.jsx For Product swiper Style  */
+/* #app { height: 100% } */
 
-.inputStyle{
-  /* width: 100%;
-  margin: 20px;
-  padding: 10px; */
-}
+/* .myProductSwiper{
+  display: flex;
+} */
