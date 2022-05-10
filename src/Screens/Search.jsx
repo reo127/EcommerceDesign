@@ -34,7 +34,7 @@ const Search = () => {
         </Box>
 
 
-        <div className="searchItems">
+        <div className="searchItems w-75" >
 
           <div class="card mb-3" style={{ maxWidth: '940px', padding: '1rem', marginTop: '10px' }}>
             <div class="row g-0">
