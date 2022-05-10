@@ -11,8 +11,11 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./Screens/Home";
 import Product from "./Screens/Product";
+import Search from "./Screens/Search";
+
 
 import { Route, Routes } from "react-router-dom";
+// import { Search } from "@mui/icons-material";
 
 
 
@@ -26,6 +29,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pro" element={<Product />} />
+          <Route path="/search" element={<Search />} />
       </Routes>
 
 
