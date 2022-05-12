@@ -20,6 +20,7 @@ import Product from "./Screens/Product";
 import Search from "./Screens/Search";
 import Cart from "./Screens/Cart";
 import Billing from "./Screens/Billing";
+import Category from "./Screens/Category";
 
 
 import { Route, Routes } from "react-router-dom";
@@ -40,6 +41,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart /> } />
           <Route path="/billing" element={<Billing /> } />
+          <Route path="/category" element={ <Category /> } />
       </Routes>
 
 
