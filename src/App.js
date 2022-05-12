@@ -1,10 +1,12 @@
 /*
+
 Project : Ecommerce Shop
 Use Cases : Sell physical and digital products, Sell Courses
 Tools : Material-UI, React, React-Router, Firebase
 Author : Rohan Malo - 64rohanmalo@gmail.com
 
 Note : This is the main page, Every component is Imported hare
+
 */
 
 
@@ -17,6 +19,7 @@ import Home from "./Screens/Home";
 import Product from "./Screens/Product";
 import Search from "./Screens/Search";
 import Cart from "./Screens/Cart";
+import Billing from "./Screens/Billing";
 
 
 import { Route, Routes } from "react-router-dom";
@@ -36,6 +39,7 @@ function App() {
           <Route path="/pro" element={<Product />} />
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart /> } />
+          <Route path="/billing" element={<Billing /> } />
       </Routes>
 
 
