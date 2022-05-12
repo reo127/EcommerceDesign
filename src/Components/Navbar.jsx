@@ -1,4 +1,13 @@
+/*
+
+This is teh main Navber
+Contains : Login, register, Notification Modal 
+
+*/
+
+
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import { LoginModal, SignupModal } from './AuthModal'
 
@@ -20,9 +29,14 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import MailIcon from '@mui/icons-material/Mail';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Backdrop from '@mui/material/Backdrop';
+import Fade from '@mui/material/Fade';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
 
 // Drawer Imports
 import Drawer from '@mui/material/Drawer';
@@ -39,19 +53,22 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 
 
 
+
+
 // AppBar/Navbar main Function Start hare ------------------------------------------------------------------  
 export default function Navbar() {
 
   // Drawer Code Start here ---------------------------------------------------------------------------------
+  // Drawer Appers left side of the screen When user clicked on the menu icon
   const [state, setState] = React.useState({ left: false });
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
+
 
   const list = (anchor) => (
     <Box
@@ -86,8 +103,24 @@ export default function Navbar() {
 
 
 
+  // Handle Modal for Open and Close ---------------------------------------
+  const [login, setLogin] = React.useState(false);
+  const loginOpen = () => setLogin(true);
+  const loginClose = () => setLogin(false);
 
-  // Code for AppBar/Navbar            ----------------------------------------------------------------------
+  const [register, setRegister] = React.useState(false);
+  const registerOpen = () => setRegister(true);
+  const registerClose = () => setRegister(false);
+
+  const [notificaton, setNotificaton] = React.useState(false);
+  const handleOpen = () => setNotificaton(true);
+  const handleClose = () => setNotificaton(false);
+
+
+
+
+
+  // Code for AppBar/Navbar     ----------------------------------------------------------------------
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -153,7 +186,7 @@ export default function Navbar() {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
-            <MailIcon />
+            <ShoppingCartIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
@@ -163,6 +196,7 @@ export default function Navbar() {
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
+          onClick={handleOpen}
         >
           <Badge badgeContent={17} color="error">
             <NotificationsIcon />
@@ -185,14 +219,7 @@ export default function Navbar() {
     </Menu>
   );
 
-  // Handle Modal for Open and Close
-  const [login, setLogin] = React.useState(false);
-  const loginOpen = () => setLogin(true);
-  const loginClose = () => setLogin(false);
 
-  const [register, setRegister] = React.useState(false);
-  const registerOpen = () => setRegister(true);
-  const registerClose = () => setRegister(false);
 
 
 
@@ -246,7 +273,7 @@ export default function Navbar() {
               aria-labelledby="keep-mounted-modal-title"
               aria-describedby="keep-mounted-modal-description"
             >
-                <LoginModal />
+              <LoginModal />
             </Modal>
 
             {/* Register Modal */}
@@ -257,22 +284,110 @@ export default function Navbar() {
               aria-labelledby="keep-mounted-modal-title"
               aria-describedby="keep-mounted-modal-description"
             >
+              <SignupModal />
+            </Modal>
 
-                <SignupModal />
+
+            {/* Notification modal */}
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              open={notificaton}
+              onClose={handleClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+              <Fade in={notificaton}>
+                <Box sx={NotificationModalStyle}>
+                  <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                    <ListItem alignItems="flex-start">
+                      <ListItemAvatar>
+                        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary="Brunch this weekend?"
+                        secondary={
+                          <React.Fragment>
+                            <Typography
+                              sx={{ display: 'inline' }}
+                              component="span"
+                              variant="body2"
+                              color="text.primary"
+                            >
+                              Ali Connors
+                            </Typography>
+                            {" — I'll be in your neighborhood doing errands this…"}
+                          </React.Fragment>
+                        }
+                      />
+                    </ListItem>
+                    <Divider variant="inset" component="li" />
+                    <ListItem alignItems="flex-start">
+                      <ListItemAvatar>
+                        <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary="Summer BBQ"
+                        secondary={
+                          <React.Fragment>
+                            <Typography
+                              sx={{ display: 'inline' }}
+                              component="span"
+                              variant="body2"
+                              color="text.primary"
+                            >
+                              to Scott, Alex, Jennifer
+                            </Typography>
+                            {" — Wish I could come, but I'm out of town this…"}
+                          </React.Fragment>
+                        }
+                      />
+                    </ListItem>
+                    <Divider variant="inset" component="li" />
+                    <ListItem alignItems="flex-start">
+                      <ListItemAvatar>
+                        <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary="Oui Oui"
+                        secondary={
+                          <React.Fragment>
+                            <Typography
+                              sx={{ display: 'inline' }}
+                              component="span"
+                              variant="body2"
+                              color="text.primary"
+                            >
+                              Sandra Adams
+                            </Typography>
+                            {' — Do you have Paris recommendations? Have you ever…'}
+                          </React.Fragment>
+                        }
+                      />
+                    </ListItem>
+                  </List>
+                </Box>
+              </Fade>
             </Modal>
 
 
 
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="error">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
+              <Link to='/cart'>
+                <IconButton size="large" aria-label="show 4 Product on cart" color="inherit">
+                  <Badge badgeContent={5} color="error">
+                    <ShoppingCartIcon />
+                  </Badge>
+                </IconButton>
+              </Link>
               <IconButton
                 size="large"
                 aria-label="show 17 new notifications"
                 color="inherit"
+                onClick={handleOpen}
               >
                 <Badge badgeContent={17} color="error">
                   <NotificationsIcon />
@@ -368,5 +483,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 
 }));
+
+ // Notification Modal Style
+ const NotificationModalStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+
 
 
