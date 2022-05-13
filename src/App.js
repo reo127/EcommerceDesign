@@ -22,6 +22,7 @@ import Cart from "./Screens/Cart";
 import Billing from "./Screens/Billing";
 import Category from "./Screens/Category";
 import Error404 from "./Screens/Error404";
+import Profile from "./Screens/Profile";
 
 
 import { Route, Routes } from "react-router-dom";
@@ -43,6 +44,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/billing" element={<Billing />} />
         <Route path="/category" element={<Category />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
 
