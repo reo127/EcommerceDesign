@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+readme.so logo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+dark
+Download
+SectionsReset
 
-## Available Scripts
+Delete
+Click on a section below to edit the contents
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Click on a section below to add it to your readme
 
-### `npm run build`
+Custom Section
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Acknowledgements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Appendix
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Authors
 
-### `npm run eject`
+Badges
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Color Reference
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Deployment
 
-## Learn More
+Documentation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Environment Variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+FAQ
 
-### Code Splitting
+Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Github Profile - About Me
 
-### Analyzing the Bundle Size
+Github Profile - Introduction
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Github Profile - Other
 
-### Making a Progressive Web App
+Github Profile - Skills
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Lessons
 
-### Advanced Configuration
+License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Logo
 
-### Deployment
+Optimizations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Related
 
-### `npm run build` fails to minify
+Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run Locally
+
+Support
+
+Tech
+
+Running Tests
+
+Usage/Examples
+
+Used By
+Editor
+
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohan-malo-1bb400184/)
+[![instagram](https://img.shields.io/badge/instagram-1DA1F2?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/code.rohan127/)
+
+
+Preview
+Raw
+
+
+# Ecommerce Desing in React
+
+Frontend of an online Ecommerce Shop Desing
+
+
+## Installation
+
+Step by step Installation ( Super easy to install )
+
+```bash
+  git clone https://github.com/reo127/EcommerceDesign.git
+  cd EcommerceDesign
+  npm install
+  npm start
+```
+
+## Features
+
+- Login and Register
+- Notification PopUp
+- 8 Pages and 5 Components
+
+
+
+
+## Pages
+
+#### This site contains 8 pages 
+
+
+| Pages |  Description                |
+| :-------- | :------------------------- |
+| `/` | **Home page** |
+| `/pro` | **Product page, Hare user see a perticular Product** |
+| `/category` | **Product separated by category** |
+| `/profile` | **User Check and Eadit their Profile** |
+| `/search` | **User Search Products** |
+| `/billing` | **Conform order and make payment** |
+| `/cart` | **User's Shopping Cart** |
+| `/404ErrorPage` | **If a user tries to visit a page that does not exist Then a 404 error page comes** |
+
+
+
+
+## Screenshots
+
+![Home interface](./screenshots/home.png)
+
+
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohan-malo-1bb400184/)
+[![instagram](https://img.shields.io/badge/instagram-1DA1F2?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/code.rohan127/)
+
+
+readme.so
+No results found for 'table'
