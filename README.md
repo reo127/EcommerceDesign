@@ -52,6 +52,3 @@ Step by step Installation ( Super easy to install )
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohan-malo-1bb400184/)
 [![instagram](https://img.shields.io/badge/instagram-1DA1F2?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/code.rohan127/)
 
-
-readme.so
-No results found for 'table'
