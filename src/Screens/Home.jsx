@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { Link } from 'react-router-dom';
 import BannerSlider from '../Components/BannerSlider'
 
 // Swiper.js imports
@@ -28,14 +29,14 @@ const Home = () => {
 
             {/* Catagory List Start hare */}
             <div className="catagoryList" >
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
-                <img src={image} className='catagoryImageStyle' alt="Catagory Image" />
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
+                <Link to='/category'> <img src={image} className='catagoryImageStyle' alt="Catagory Image" /> </Link>
             </div>
 
 
@@ -46,11 +47,11 @@ const Home = () => {
                 spaceBetween={30}
                 // freeMode={true}
                 // pagination={{
-                //     clickable: true,
-                // }}
-                // modules={[FreeMode, Pagination]}
-                className="mySwiper"
-            >
+                    //     clickable: true,
+                    // }}
+                    // modules={[FreeMode, Pagination]}
+                    className="mySwiper"
+                    >
                 <SwiperSlide>
                     <Card sx={{ maxWidth: 345 }}>
                         <CardMedia
@@ -69,8 +70,8 @@ const Home = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" variant='contained'>Share</Button>
-                            <Button size="small" variant='contained'>Learn More</Button>
+                            <Button size="small" > <Link to='/pro' style={{color:'#1976d2'}}> Buy </Link> </Button>
+                            <Button size="small" >Add to Cart </Button>
                         </CardActions>
                     </Card>
                 </SwiperSlide>

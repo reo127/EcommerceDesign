@@ -161,8 +161,8 @@ export default function Navbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <Link to='profile'><MenuItem onClick={handleMenuClose} style={{color:'black'}}> Profile </MenuItem></Link>
+      <Link to='profile'><MenuItem onClick={handleMenuClose} style={{color:'black'}}> My account </MenuItem></Link>
     </Menu>
   );
 
@@ -246,7 +246,7 @@ export default function Navbar() {
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
             >
-              <img src={StoreLogo} alt="logo" style={{ width: "5rem" }} />
+              <Link to='/'> <img src={StoreLogo} alt="logo" style={{ width: "5rem" }} /> </Link>
             </Typography>
             <Search>
               <SearchIconWrapper>

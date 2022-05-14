@@ -24,7 +24,7 @@ const Profile = () => {
                                     </Stack>
                                 </div>
                                 <div class="flex flex-col items-center text-center justify-center">
-                                    <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Rohan Malo</h2>
+                                    <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Rohan Malo</h2> 
                                     <div class="w-50 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
                                 </div>
                                 <Box
@@ -38,7 +38,7 @@ const Profile = () => {
                                     <TextField id="standard-basic" label="Email" className='w-75' variant="standard" />
                                     <TextField id="standard-basic" label="Phone" className='w-75' variant="standard" />
                                     <TextField id="standard-basic" label="Address" className='w-75' variant="standard" />
-                                    <Button variant="contained" className='d-flex justify-content-center mt-3 '> save changes </Button>
+                                    <Button variant="contained" className='d-flex justify-content-center mt-3 ' color='warning'> save changes </Button>
                                 </Box>
                             </div>
 
